@@ -1,12 +1,163 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\giova\\Documents\\Development\\pessoal\\API\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Nicolas\\source\\repos\\nicolas\\snack-bar-service\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1B95B751-153B-4FD2-845D-B06A604344B5}|src\\Core\\Application\\Application.csproj|c:\\users\\nicolas\\source\\repos\\nicolas\\snack-bar-service\\src\\core\\application\\applicationmoduledependecy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B95B751-153B-4FD2-845D-B06A604344B5}|src\\Core\\Application\\Application.csproj|solutionrelative:src\\core\\application\\applicationmoduledependecy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB5A99E8-0B99-473F-8405-FDC884A3A037}|CrossCutting\\CrossCutting.csproj|c:\\users\\nicolas\\source\\repos\\nicolas\\snack-bar-service\\crosscutting\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB5A99E8-0B99-473F-8405-FDC884A3A037}|CrossCutting\\CrossCutting.csproj|solutionrelative:crosscutting\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B95B751-153B-4FD2-845D-B06A604344B5}|src\\Core\\Application\\Application.csproj|c:\\users\\nicolas\\source\\repos\\nicolas\\snack-bar-service\\src\\core\\application\\product\\commands\\createproduct\\createproductcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B95B751-153B-4FD2-845D-B06A604344B5}|src\\Core\\Application\\Application.csproj|solutionrelative:src\\core\\application\\product\\commands\\createproduct\\createproductcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB5A99E8-0B99-473F-8405-FDC884A3A037}|CrossCutting\\CrossCutting.csproj|c:\\users\\nicolas\\source\\repos\\nicolas\\snack-bar-service\\crosscutting\\validationbehavior\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB5A99E8-0B99-473F-8405-FDC884A3A037}|CrossCutting\\CrossCutting.csproj|solutionrelative:crosscutting\\validationbehavior\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62649A59-8B73-4A79-931D-23E2AF49AF56}|src\\Ports\\Api\\Api.csproj|c:\\users\\nicolas\\source\\repos\\nicolas\\snack-bar-service\\src\\ports\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62649A59-8B73-4A79-931D-23E2AF49AF56}|src\\Ports\\Api\\Api.csproj|solutionrelative:src\\ports\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 387,
+          "SelectedChildIndex": 13,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Result.cs",
+              "DocumentMoniker": "C:\\Users\\Nicolas\\source\\repos\\nicolas\\snack-bar-service\\CrossCutting\\Result.cs",
+              "RelativeDocumentMoniker": "CrossCutting\\Result.cs",
+              "ToolTip": "C:\\Users\\Nicolas\\source\\repos\\nicolas\\snack-bar-service\\CrossCutting\\Result.cs",
+              "RelativeToolTip": "CrossCutting\\Result.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T03:45:19.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0e6ecdb7-7308-37e5-9768-ada2bc2961ab}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ValidationBehavior.cs",
+              "DocumentMoniker": "C:\\Users\\Nicolas\\source\\repos\\nicolas\\snack-bar-service\\CrossCutting\\ValidationBehavior\\ValidationBehavior.cs",
+              "RelativeDocumentMoniker": "CrossCutting\\ValidationBehavior\\ValidationBehavior.cs",
+              "ToolTip": "C:\\Users\\Nicolas\\source\\repos\\nicolas\\snack-bar-service\\CrossCutting\\ValidationBehavior\\ValidationBehavior.cs",
+              "RelativeToolTip": "CrossCutting\\ValidationBehavior\\ValidationBehavior.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T03:13:19.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationModuleDependecy.cs",
+              "DocumentMoniker": "C:\\Users\\Nicolas\\source\\repos\\nicolas\\snack-bar-service\\src\\Core\\Application\\ApplicationModuleDependecy.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Application\\ApplicationModuleDependecy.cs",
+              "ToolTip": "C:\\Users\\Nicolas\\source\\repos\\nicolas\\snack-bar-service\\src\\Core\\Application\\ApplicationModuleDependecy.cs",
+              "RelativeToolTip": "src\\Core\\Application\\ApplicationModuleDependecy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T01:33:34.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Nicolas\\source\\repos\\nicolas\\snack-bar-service\\src\\Ports\\Api\\Program.cs",
+              "RelativeDocumentMoniker": "src\\Ports\\Api\\Program.cs",
+              "ToolTip": "C:\\Users\\Nicolas\\source\\repos\\nicolas\\snack-bar-service\\src\\Ports\\Api\\Program.cs",
+              "RelativeToolTip": "src\\Ports\\Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T01:31:52.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateProductCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Nicolas\\source\\repos\\nicolas\\snack-bar-service\\src\\Core\\Application\\Product\\Commands\\CreateProduct\\CreateProductCommandValidator.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Application\\Product\\Commands\\CreateProduct\\CreateProductCommandValidator.cs",
+              "ToolTip": "C:\\Users\\Nicolas\\source\\repos\\nicolas\\snack-bar-service\\src\\Core\\Application\\Product\\Commands\\CreateProduct\\CreateProductCommandValidator.cs",
+              "RelativeToolTip": "src\\Core\\Application\\Product\\Commands\\CreateProduct\\CreateProductCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T02:11:50.765Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 387,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
