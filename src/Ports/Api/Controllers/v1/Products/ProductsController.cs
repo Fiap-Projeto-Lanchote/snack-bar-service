@@ -29,7 +29,7 @@ namespace Api.Controllers.v1.Products
             return Ok(result.Data);
         }
 
-        [HttpPost]
+        [HttpPost("/Create")]
         [ProducesResponseType((int)HttpStatusCode.Created)]
         [ProducesResponseType(typeof(IEnumerable<ValidationFailure>), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> CreateProduct([FromBody] CreateProductCommand command, CancellationToken cancellationToken)
@@ -42,7 +42,7 @@ namespace Api.Controllers.v1.Products
             return BadRequest(result.Errors);
         }
 
-        [HttpPost]
+        [HttpPost("/Delete")]
         [ProducesResponseType((int)HttpStatusCode.Created)]
         [ProducesResponseType(typeof(IEnumerable<ValidationFailure>), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> DeleteProduct([FromBody] DeleteProductCommand command, CancellationToken cancellationToken)
@@ -55,7 +55,7 @@ namespace Api.Controllers.v1.Products
             return BadRequest(result.Errors);
         }
 
-        [HttpPost]
+        [HttpPost("/Update")]
         [ProducesResponseType((int)HttpStatusCode.Created)]
         [ProducesResponseType(typeof(IEnumerable<ValidationFailure>), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> UpdateProduct([FromBody] UpdateProductCommand command, CancellationToken cancellationToken)
