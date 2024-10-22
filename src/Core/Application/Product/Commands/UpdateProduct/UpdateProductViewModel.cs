@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Product.Commands.Product.UpdateProduct
+namespace Application.Product.Commands.UpdateProduct
 {
-    internal class UpdateProductViewModel
+    public class UpdateProductViewModel
     {
     }
 }

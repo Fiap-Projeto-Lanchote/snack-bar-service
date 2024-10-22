@@ -1,6 +1,12 @@
-﻿namespace Application.Product.Query.GetById
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Application.Product.Query.GetById
 {
-    public record GetProductByIdViewModel
+    public class GetProductByIdViewModel
     {
         public GetProductByIdViewModel(Guid id)
         {

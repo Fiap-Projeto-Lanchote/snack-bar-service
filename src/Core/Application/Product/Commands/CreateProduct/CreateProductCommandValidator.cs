@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Application.Product.Commands.Product.CreateProduct
+namespace Application.Product.Commands.CreateProduct
 {
     public class CreateProductCommandValidator : AbstractValidator<CreateProductCommand>
     {
@@ -9,7 +9,7 @@ namespace Application.Product.Commands.Product.CreateProduct
             RuleFor(x => x.Id)
                 .NotEmpty();
 
-            RuleFor(x => x.CategoryId)
+            RuleFor(x => x.FkCategoria)
                 .NotEmpty();
 
             RuleFor(x => x.Name)

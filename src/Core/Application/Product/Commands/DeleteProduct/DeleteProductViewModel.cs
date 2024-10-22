@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Product.Commands.Product.CreateProduct
+namespace Application.Product.Commands.DeleteProduct
 {
-    internal class CreateProductViewModel
+    public class DeleteProductViewModel
     {
     }
 }

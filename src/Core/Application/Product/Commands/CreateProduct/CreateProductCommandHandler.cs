@@ -1,7 +1,7 @@
 ﻿using CrossCutting;
 using MediatR;
 
-namespace Application.Product.Commands.Product.CreateProduct
+namespace Application.Product.Commands.CreateProduct
 {
     public sealed class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, Result>
     {
