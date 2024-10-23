@@ -19,14 +19,14 @@ namespace Infra.DataBase.Dal
             _context = context;
         }
 
-        public async Task<IEnumerable<Produto>> GetProductByCategory(Guid PkCategoria, CancellationToken cancellationToken)
+        public async Task<IEnumerable<Produto>> GetProductByCategory(int PkCategoria, CancellationToken cancellationToken)
         {
             return await _context.Produto.Where(x => x.FkCategoria == PkCategoria).OrderBy(z => z.Nome).ToArrayAsync(cancellationToken);
         }
 
-        public async Task<IEnumerable<Produto>> GetProductById(Guid Id, CancellationToken cancellationToken)
+        public async Task<Produto?> GetProductById(Guid id, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await _context.Produto.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
         }
     }
 }

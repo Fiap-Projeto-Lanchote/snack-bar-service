@@ -1,6 +1,7 @@
 ﻿using Application.Product.Commands.CreateProduct;
 using Application.Product.Commands.DeleteProduct;
 using Application.Product.Commands.UpdateProduct;
+using Application.Product.Query.GetByCategory;
 using Application.Product.Query.GetById;
 using FluentValidation.Results;
 using MediatR;
@@ -19,12 +20,22 @@ namespace Api.Controllers.v1.Products
 
         public ProductsController(IMediator mediator) => _mediator = mediator;
 
-        [HttpGet("{id}")]
+        [HttpGet("GetProductById/{id}")]
         [ProducesResponseType(typeof(GetProductByIdViewModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(IEnumerable<ValidationFailure>), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> GetProductById([FromRoute] Guid id, CancellationToken cancellationToken)
         {
             var result = await _mediator.Send(new GetProductByIdQuery(id), cancellationToken);
+
+            return Ok(result.Data);
+        }
+
+        [HttpGet("GetProductByCategory/{id}")]
+        [ProducesResponseType(typeof(GetProductByCategoryViewModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(IEnumerable<ValidationFailure>), (int)HttpStatusCode.BadRequest)]
+        public async Task<IActionResult> GetProductByCategory([FromRoute] int id, CancellationToken cancellationToken)
+        {
+            var result = await _mediator.Send(new GetProductByCategoryQuery(id), cancellationToken);
 
             return Ok(result.Data);
         }

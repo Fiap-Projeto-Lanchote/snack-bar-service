@@ -7,7 +7,7 @@ namespace Domain.Entities
         [Key]
         public required Guid Id { get; set; }
         public required string? Nome { get; set; }
-        public required Guid FkCategoria { get; set; }
+        public required int FkCategoria { get; set; }
     }
 
     public class Categoria

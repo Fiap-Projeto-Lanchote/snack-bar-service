@@ -1,6 +1,7 @@
 ﻿using Domain.Entities;
 using Infra.DataBase.Context;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Infra.DataBase.Repositories
 {
@@ -25,13 +26,14 @@ namespace Infra.DataBase.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Produto?> Exists(string Nome, CancellationToken cancellationToken)
+        public async Task<Produto?> Exists(Guid id, CancellationToken cancellationToken)
         {
-            return await _context.Produto.SingleOrDefaultAsync(x => x.Nome == Nome, cancellationToken);
+            return await _context.Produto.SingleOrDefaultAsync(x => x.Id == id, cancellationToken);
         }
 
         public async Task Update(Produto request, CancellationToken cancellationToken)
         {
+            _context.ChangeTracker.Clear();
             _context.Produto.Update(request);
             await _context.SaveChangesAsync();
         }

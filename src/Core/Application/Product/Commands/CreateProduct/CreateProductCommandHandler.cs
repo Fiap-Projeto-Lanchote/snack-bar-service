@@ -2,7 +2,6 @@
 using Infra.DataBase.Repositories;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using System.Diagnostics;
 using Domain.Entities;
 
 namespace Application.Product.Commands.CreateProduct
@@ -25,12 +24,12 @@ namespace Application.Product.Commands.CreateProduct
             {
                 _logger.LogInformation("Novo produto {0}", request.Name);
 
-                var exists = await _productRepository.Exists(request.Name ?? "", cancellationToken);
+                var exists = await _productRepository.Exists(request.Id, cancellationToken);
 
                 if (exists is not null)
                     return Result.Failure("Produto", "Produto já existe");
 
-                var product = new Domain.Entities.Produto()
+                var product = new Produto()
                 {
                     Id = request.Id,
                     FkCategoria = request.FkCategoria,
@@ -45,7 +44,7 @@ namespace Application.Product.Commands.CreateProduct
             }
             catch (Exception ex)
             {
-                throw;
+                return Result.Failure("Produto", "Erro ao criar produto");
             }
         }
     }

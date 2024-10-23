@@ -10,7 +10,7 @@ namespace Infra.DataBase.Repositories
 
         Task Update(Produto request, CancellationToken cancellationToken);
 
-        Task<Produto?> Exists(string Nome, CancellationToken cancellationToken);
+        Task<Produto?> Exists(Guid id, CancellationToken cancellationToken);
 
     }
 }

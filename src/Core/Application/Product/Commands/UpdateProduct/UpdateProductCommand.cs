@@ -7,6 +7,6 @@ namespace Application.Product.Commands.UpdateProduct
     {
         public required Guid Id { get; set; }
         public required string? Name { get; set; }
-        public required Guid FkCategoria { get; set; }
+        public required int FkCategoria { get; set; }
     }
 }
