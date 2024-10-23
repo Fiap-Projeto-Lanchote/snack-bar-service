@@ -15,7 +15,7 @@ namespace Infra.DataBase.Migrations
                 name: "Categoria",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false),
+                    Id = table.Column<int>(nullable: false),
                     Nome = table.Column<string>(type: "nvarchar(255)", nullable: true)
                 },
                 constraints: table =>
@@ -43,7 +43,7 @@ namespace Infra.DataBase.Migrations
                 {
                     Id = table.Column<Guid>(nullable: false),
                     Nome = table.Column<string>(type: "nvarchar(255)", nullable: true),
-                    FkCategoria = table.Column<Guid>(nullable: false)
+                    FkCategoria = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -52,8 +52,7 @@ namespace Infra.DataBase.Migrations
                         name: "FK_Produto_Categoria_FkCategoria",
                         column: x => x.FkCategoria,
                         principalTable: "Categoria",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -100,7 +99,12 @@ namespace Infra.DataBase.Migrations
                         principalTable: "Pedido",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                });
+               });
+
+            migrationBuilder.Sql("INSERT INTO Categoria VALUES (1, 'Lanche')");
+            migrationBuilder.Sql("INSERT INTO Categoria VALUES (2, 'Acompanhamento')");
+            migrationBuilder.Sql("INSERT INTO Categoria VALUES (3, 'Bebida')");
+            migrationBuilder.Sql("INSERT INTO Categoria VALUES (4, 'Sobremesa')");
         }
 
         /// <inheritdoc />

@@ -1,10 +1,10 @@
 ﻿using FluentValidation;
 
-namespace Application.Product.Commands.CreateProduct
+namespace Application.Product.Commands.UpdateProduct
 {
-    public class CreateProductCommandValidator : AbstractValidator<CreateProductCommand>
+    public class UpdateProductCommandValidator : AbstractValidator<UpdateProductCommand>
     {
-        public CreateProductCommandValidator()
+        public UpdateProductCommandValidator()
         {
             RuleFor(x => x.Id)
                 .NotEmpty();

@@ -1,5 +1,6 @@
 ﻿using CrossCutting.ValidationBehavior;
 using FluentValidation;
+using Infra.DataBase.Repositories;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;

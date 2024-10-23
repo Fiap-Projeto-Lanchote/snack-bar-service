@@ -1,12 +1,23 @@
-﻿namespace Application.Product.Query.GetById
+﻿using Domain.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Application.Product.Query.GetById
 {
-    public record GetProductByIdViewModel
+    public class GetProductByIdViewModel
     {
-        public GetProductByIdViewModel(Guid id)
+        public GetProductByIdViewModel(Produto produto)
         {
-            Id = id;
+            Id = produto.Id;
+            Nome = produto.Nome;
+            FkCategoria = produto.FkCategoria;
         }
 
         public Guid Id { get; set; }
+        public string? Nome { get; set; }
+        public int FkCategoria { get; set; }
     }
 }

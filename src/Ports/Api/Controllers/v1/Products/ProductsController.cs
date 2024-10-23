@@ -1,4 +1,7 @@
 ﻿using Application.Product.Commands.CreateProduct;
+using Application.Product.Commands.DeleteProduct;
+using Application.Product.Commands.UpdateProduct;
+using Application.Product.Query.GetByCategory;
 using Application.Product.Query.GetById;
 using FluentValidation.Results;
 using MediatR;
@@ -17,7 +20,7 @@ namespace Api.Controllers.v1.Products
 
         public ProductsController(IMediator mediator) => _mediator = mediator;
 
-        [HttpGet("{id}")]
+        [HttpGet("GetProductById/{id}")]
         [ProducesResponseType(typeof(GetProductByIdViewModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(IEnumerable<ValidationFailure>), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> GetProductById([FromRoute] Guid id, CancellationToken cancellationToken)
@@ -27,10 +30,46 @@ namespace Api.Controllers.v1.Products
             return Ok(result.Data);
         }
 
-        [HttpPost]
+        [HttpGet("GetProductByCategory/{id}")]
+        [ProducesResponseType(typeof(GetProductByCategoryViewModel), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(IEnumerable<ValidationFailure>), (int)HttpStatusCode.BadRequest)]
+        public async Task<IActionResult> GetProductByCategory([FromRoute] int id, CancellationToken cancellationToken)
+        {
+            var result = await _mediator.Send(new GetProductByCategoryQuery(id), cancellationToken);
+
+            return Ok(result.Data);
+        }
+
+        [HttpPost("/Create")]
         [ProducesResponseType((int)HttpStatusCode.Created)]
         [ProducesResponseType(typeof(IEnumerable<ValidationFailure>), (int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> CreateProduct([FromBody] CreateProductCommand command, CancellationToken cancellationToken)
+        {
+            var result = await _mediator.Send(command, cancellationToken);
+
+            if (result.Succeeded)
+                return Created("", result.Data);
+
+            return BadRequest(result.Errors);
+        }
+
+        [HttpPost("/Delete")]
+        [ProducesResponseType((int)HttpStatusCode.Created)]
+        [ProducesResponseType(typeof(IEnumerable<ValidationFailure>), (int)HttpStatusCode.BadRequest)]
+        public async Task<IActionResult> DeleteProduct([FromBody] DeleteProductCommand command, CancellationToken cancellationToken)
+        {
+            var result = await _mediator.Send(command, cancellationToken);
+
+            if (result.Succeeded)
+                return Created("", result.Data);
+
+            return BadRequest(result.Errors);
+        }
+
+        [HttpPost("/Update")]
+        [ProducesResponseType((int)HttpStatusCode.Created)]
+        [ProducesResponseType(typeof(IEnumerable<ValidationFailure>), (int)HttpStatusCode.BadRequest)]
+        public async Task<IActionResult> UpdateProduct([FromBody] UpdateProductCommand command, CancellationToken cancellationToken)
         {
             var result = await _mediator.Send(command, cancellationToken);
 
