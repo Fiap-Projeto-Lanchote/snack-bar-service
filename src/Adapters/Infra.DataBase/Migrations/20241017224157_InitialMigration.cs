@@ -15,7 +15,7 @@ namespace Infra.DataBase.Migrations
                 name: "Categoria",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false),
+                    Id = table.Column<int>(nullable: false),
                     Nome = table.Column<string>(type: "nvarchar(255)", nullable: true)
                 },
                 constraints: table =>
@@ -100,6 +100,17 @@ namespace Infra.DataBase.Migrations
                         principalTable: "Pedido",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Categoria",
+                columns: new[] { "Id", "Nome" },
+                values: new object[,]
+                {
+                    { 1, "Lanche" },
+                    { 2, "Acompanhamento" },
+                    { 3, "Bebida" },
+                    { 4, "Sobremesa" },
                 });
         }
 

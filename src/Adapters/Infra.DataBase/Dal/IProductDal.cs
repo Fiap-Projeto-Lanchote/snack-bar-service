@@ -1,4 +1,5 @@
 ﻿using Application.Product.Query.GetById;
+using Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace Infra.DataBase.Dal
 {
     public interface IProductDal
     {
-        Task<IEnumerable<GetProductByIdViewModel>> GetProductById(Guid Id, CancellationToken cancellationToken);
-        Task<IEnumerable<GetProductByIdViewModel>> GetProductByCategory(Guid PkCategoria, CancellationToken cancellationToken)
+        Task<IEnumerable<Produto>> GetProductById(Guid Id, CancellationToken cancellationToken);
+        Task<IEnumerable<Produto>> GetProductByCategory(Guid PkCategoria, CancellationToken cancellationToken);
     }
 }

@@ -1,13 +1,6 @@
-﻿using Azure.Core;
-using Domain.Entities;
-using Domain.ViewModel.Product;
+﻿using Domain.Entities;
 using Infra.DataBase.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infra.DataBase.Repositories
 {
@@ -20,15 +13,27 @@ namespace Infra.DataBase.Repositories
             _context = context;
         }
 
-        public async Task Create(Product request, CancellationToken cancellationToken) => await _context.Product.AddAsync(request, cancellationToken);        
-
-        public async Task Delete(Product request, CancellationToken cancellationToken) => _context.Product.Remove(request);        
-
-        public async Task<Product?> Exists(Product Product, CancellationToken cancellationToken)
+        public async Task Create(Produto request, CancellationToken cancellationToken)
         {
-            return await _context.Product.FindAsync(Product, cancellationToken);
+            await _context.Produto.AddAsync(request, cancellationToken);
+            await _context.SaveChangesAsync();
         }
 
-        public async Task Update(Product request, CancellationToken cancellationToken) => _context.Product.Update(request);
+        public async Task Delete(Produto request, CancellationToken cancellationToken)
+        {
+            _context.Produto.Remove(request);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<Produto?> Exists(string Nome, CancellationToken cancellationToken)
+        {
+            return await _context.Produto.SingleOrDefaultAsync(x => x.Nome == Nome, cancellationToken);
+        }
+
+        public async Task Update(Produto request, CancellationToken cancellationToken)
+        {
+            _context.Produto.Update(request);
+            await _context.SaveChangesAsync();
+        }
     }
 }

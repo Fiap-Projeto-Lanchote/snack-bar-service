@@ -1,5 +1,4 @@
 ﻿using CrossCutting;
-using Domain.ViewModel.Product;
 using MediatR;
 
 namespace Application.Product.Query.GetById

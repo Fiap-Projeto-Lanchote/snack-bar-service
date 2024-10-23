@@ -2,7 +2,6 @@
 using Application.Product.Commands.DeleteProduct;
 using Application.Product.Commands.UpdateProduct;
 using Application.Product.Query.GetById;
-using Domain.ViewModel.Product;
 using FluentValidation.Results;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;

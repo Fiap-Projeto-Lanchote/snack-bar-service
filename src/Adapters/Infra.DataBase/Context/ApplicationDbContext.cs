@@ -10,7 +10,8 @@ namespace Infra.DataBase.Context
 {
     public class ApplicationDbContext : DbContext
     {
-        public DbSet<Product> Product { get; set; }
+        public DbSet<Produto> Produto { get; set; }
+        public DbSet<Categoria> Categoria { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options) { }
