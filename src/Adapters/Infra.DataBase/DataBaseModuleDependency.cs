@@ -1,4 +1,5 @@
-﻿using Infra.DataBase.Context;
+﻿using Domain.Interfaces;
+using Infra.DataBase.Context;
 using Infra.DataBase.Dal;
 using Infra.DataBase.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +19,7 @@ namespace Infra.DataBase
 
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IProductDal, ProductDal>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
 
             return services;
         }
